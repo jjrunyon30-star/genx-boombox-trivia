@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Back to the Boombox</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="game-container">
+
+<!-- START SCREEN -->
+
+<section id="startScreen" class="screen active">
+
+<div class="boombox">
+🎧
+</div>
+
+<h1>
+BACK TO THE<br>
+BOOMBOX
+</h1>
+
+<h2>
+THE ULTIMATE GEN X<br>
+MUSIC & POP CULTURE CHALLENGE
+</h2>
+
+<p>
+1000 Questions From The Soundtrack Of Your Generation
+</p>
+
+
+<h2>HOW DO YOU WANT TO PLAY?</h2>
+
+<button onclick="startGame(50)">
+🎧 SOLO MODE
+<br>
+<small>QUICK MIX - 50 QUESTIONS</small>
+</button>
+
+
+<button onclick="startGame(100)">
+👥 PARTY MODE
+<br>
+<small>FULL ALBUM - 100 QUESTIONS</small>
+</button>
+
+
+<button onclick="startGame(250)">
+🔥 HARDCORE GEN X
+<br>
+<small>CONCERT MODE - 250 QUESTIONS</small>
+</button>
+
+</section>
+
+
+
+<!-- QUIZ SCREEN -->
+
+<section id="quizScreen" class="screen">
+
+
+<div class="header">
+
+<div id="category">
+CATEGORY
+</div>
+
+<div id="questionCount">
+QUESTION 1 / 50
+</div>
+
+</div>
+
+
+<div class="progress">
+
+<div id="progressBar"></div>
+
+</div>
+
+
+
+<div class="card">
+
+<div id="difficulty">
+MEDIUM
+</div>
+
+
+<h2 id="question">
+Question goes here
+</h2>
+
+
+<div id="answers">
+
+<button class="answer" onclick="selectAnswer(0)">
+Answer
+</button>
+
+<button class="answer" onclick="selectAnswer(1)">
+Answer
+</button>
+
+<button class="answer" onclick="selectAnswer(2)">
+Answer
+</button>
+
+<button class="answer" onclick="selectAnswer(3)">
+Answer
+</button>
+
+</div>
+
+
+<div id="feedback"></div>
+
+
+<button id="nextButton" onclick="nextQuestion()">
+NEXT
+</button>
+
+
+</div>
+
+
+<div class="score">
+
+SCORE:
+<span id="score">0</span>
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- RESULTS SCREEN -->
+
+
+<section id="resultScreen" class="screen">
+
+
+<h1>
+GAME OVER
+</h1>
+
+
+<h2 id="finalScore"></h2>
+
+
+<h2 id="titleEarned"></h2>
+
+
+<button onclick="location.reload()">
+PLAY AGAIN
+</button>
+
+
+</section>
+
+
+</div>
+
+
+<script src="questions.js"></script>
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
