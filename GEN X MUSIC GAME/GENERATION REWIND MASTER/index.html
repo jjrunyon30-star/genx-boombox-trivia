@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Generation Rewind | The Ultimate Gen X Trivia Challenge</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="logo.png">
+
+</head>
+
+<body>
+
+<div class="game-container">
+
+<!-- START SCREEN -->
+
+<section id="startScreen" class="screen active">
+
+<div class="boombox">
+<img src="boombox.png" alt="Boombox">
+</div>
+
+<h1>
+GENERATION<br>
+REWIND
+</h1>
+<h2>
+THE ULTIMATE GEN X<br>
+MUSIC & POP CULTURE CHALLENGE
+</h2>
+
+<p>
+900+ Trivia Questions From the Greatest Generation to Grow Up Analog
+
+🎵 Music • 📺 TV • 🎬 Movies • 🎮 Video Games
+🧸 Toys • 📼 MTV • 📢 Commercials • 🌟 Pop Culture
+</p>
+
+<h3>STEP 1: CHOOSE A CATEGORY</h3>
+
+<p id="selectedCategory">
+🎲 Current Category: RANDOM
+</p>
+
+<div class="category-buttons">
+
+<button onclick="setCategory('Random', this)">🎲 RANDOM</button>
+<button onclick="setCategory('MTV',this)">📺 MTV</button>
+<button onclick="setCategory('Music',this)">🎵 MUSIC</button>
+<button onclick="setCategory('Movies',this)">🎬 MOVIES</button>
+<button onclick="setCategory('TV',this)">📺 TV</button>
+<button onclick="setCategory('Cartoons',this)">😂 CARTOONS</button>
+<button onclick="setCategory('Commercials',this)">📢 COMMERCIALS</button>
+<button onclick="setCategory('Celebrity',this)">🌟 CELEBRITIES</button>
+<button onclick="setCategory('Toys',this)">🧸 TOYS</button>
+<button onclick="setCategory('Games',this)">🎮 VIDEO GAMES</button>
+
+</div>
+
+<h3>STEP 2: CHOOSE YOUR GAME LENGTH</h3>
+
+<div class="mode-buttons">
+
+<button onclick="startGame(10,this)">
+🎧 QUICK HIT
+<br>
+<small>10 QUESTIONS</small>
+</button>
+
+<button onclick="startGame(50,this)">
+📼 ROAD TRIP
+<br>
+<small>50 QUESTIONS</small>
+</button>
+
+<button onclick="startGame(250,this)">
+🔥 FULL THROWBACK
+<br>
+<small>250 QUESTIONS</small>
+</button>
+
+</div>
+<p class="version">
+Version 1.0 • © 2026 Generation Rewind
+</p>
+
+</section>
+
+</section>
+
+
+<section id="loadingScreen" class="screen">
+
+<div class="loading-cassette">
+📼
+</div>
+
+<h2>REWINDING YOUR MEMORIES...</h2>
+
+<p id="loadingDetails"></p>
+
+</section>
+<!-- QUIZ SCREEN -->
+
+<section id="quizScreen" class="screen">
+
+
+<div class="header">
+
+<div id="questionNumber">
+Question 1 of 10
+</div>
+
+<div id="category">
+CATEGORY
+</div>
+
+<div id="questionCount">
+QUESTION 1 / 50
+</div>
+
+</div>
+
+
+<div class="progress">
+
+<div id="progressBar"></div>
+
+</div>
+
+
+
+<div class="card">
+
+<div id="difficulty">
+MEDIUM
+</div>
+
+
+<h2 id="question">
+Question goes here
+</h2>
+
+
+<div id="answers">
+
+<button class="answer" onclick="selectAnswer(0)">
+Answer
+</button>
+
+<button class="answer" onclick="selectAnswer(1)">
+Answer
+</button>
+
+<button class="answer" onclick="selectAnswer(2)">
+Answer
+</button>
+
+<button class="answer" onclick="selectAnswer(3)">
+Answer
+</button>
+
+</div>
+
+
+<div id="feedback"></div>
+
+
+<button id="nextButton" onclick="nextQuestion()">
+NEXT
+</button>
+
+
+</div>
+
+
+<div class="score">
+
+SCORE:
+<span id="score">0</span>
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- RESULTS SCREEN -->
+
+
+<section id="resultScreen" class="screen">
+
+
+<h1>
+REWIND COMPLETE
+</h1>
+<div class="result-trophy">
+🏆
+</div>
+
+
+<h2 id="finalScore"></h2>
+
+
+<h2 id="titleEarned"></h2>
+<p id="messageEarned"></p>
+
+
+<button onclick="location.reload()">
+PLAY AGAIN
+</button>
+<button onclick="goToMenu()">
+🏠 RETURN TO MENU
+</button>
+
+
+</section>
+
+
+</div>
+
+<audio id="clickSound" src="sounds/click.mp3"></audio>
+<audio id="correctSound" src="sounds/correct.mp3"></audio>
+<audio id="wrongSound" src="sounds/wrong.mp3"></audio>
+<audio id="cheerSound" src="sounds/cheer.mp3"></audio>
+<script src="questions.js"></script>
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
